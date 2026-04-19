@@ -70,10 +70,7 @@ jobs:
             --platform managed \
             --allow-unauthenticated \
             --service-account fastapi-run-sa@$PROJECT_ID.iam.gserviceaccount.com \
-            --set-env-vars \
-              MONGO_URI="${{ secrets.MONGO_URI }}",\
-              DB_NAME="retail",\
-              SECRET_KEY="${{ secrets.SECRET_KEY }}"
+            --set-env-vars "MONGO_URI=${{ secrets.MONGO_URI }},DB_NAME=${{ secrets.DB_NAME }},SECRET_KEY=${{ secrets.SECRET_KEY }}"
 
       # =====================================================
       # 🔵 BUILD + PUSH + DEPLOY: Import Service
@@ -97,7 +94,4 @@ jobs:
             --platform managed \
             --allow-unauthenticated \
             --service-account fastapi-run-sa@$PROJECT_ID.iam.gserviceaccount.com \
-            --set-env-vars \
-              MONGO_URI="${{ secrets.MONGO_URI }}",\
-              DB_NAME="retail",\
-              SECRET_KEY="${{ secrets.SECRET_KEY }}"
+            --set-env-vars "MONGO_URI=${{ secrets.MONGO_URI }},DB_NAME=${{ secrets.DB_NAME }},SECRET_KEY=${{ secrets.SECRET_KEY }}"
