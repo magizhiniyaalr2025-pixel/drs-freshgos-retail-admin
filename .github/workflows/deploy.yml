@@ -1,42 +1,98 @@
-name: Deploy to Cloud Run
+name: Deploy FastAPI Microservices (Cloud Run - WIF)
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
+env:
+  PROJECT_ID: drs-freshgos-retail-admin-123
+  REGION: asia-south1
+  REPOSITORY: fastapi-repo
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      id-token: write
-
     steps:
-      - uses: actions/checkout@v4
+      # -----------------------------------
+      # 1. Checkout code
+      # -----------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - id: auth
+      # -----------------------------------
+      # 2. Authenticate to GCP (WIF - NO KEY)
+      # -----------------------------------
+      - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: "projects/YOUR_PROJECT_NUMBER/locations/global/workloadIdentityPools/github-pool/providers/github-provider"
-          service_account: "fastapi-run-sa@YOUR_PROJECT_ID.iam.gserviceaccount.com"
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
-      - uses: google-github-actions/setup-gcloud@v2
+      # -----------------------------------
+      # 3. Setup gcloud
+      # -----------------------------------
+      - name: Setup Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
 
-      - name: Configure Docker
-        run: gcloud auth configure-docker asia-south1-docker.pkg.dev
-
-      - name: Build & Push Identity
+      # -----------------------------------
+      # 4. Docker auth for Artifact Registry
+      # -----------------------------------
+      - name: Configure Docker authentication
         run: |
-          docker build -f services/identity-service/Dockerfile -t asia-south1-docker.pkg.dev/$PROJECT_ID/fastapi-repo/identity-service .
-          docker push asia-south1-docker.pkg.dev/$PROJECT_ID/fastapi-repo/identity-service
+          gcloud auth configure-docker $REGION-docker.pkg.dev --quiet
 
-      - name: Deploy Identity
+      # =====================================================
+      # 🟢 BUILD + PUSH + DEPLOY: Identity Service
+      # =====================================================
+      - name: Build Identity Service
+        run: |
+          docker build \
+            -f services/identity-service/Dockerfile \
+            -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest \
+            .
+
+      - name: Push Identity Service
+        run: |
+          docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest
+
+      - name: Deploy Identity Service
         run: |
           gcloud run deploy identity-service \
-            --image asia-south1-docker.pkg.dev/$PROJECT_ID/fastapi-repo/identity-service \
-            --region asia-south1 \
+            --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest \
+            --region $REGION \
             --platform managed \
-            --allow-unauthenticated
+            --allow-unauthenticated \
+            --service-account fastapi-run-sa@$PROJECT_ID.iam.gserviceaccount.com \
+            --set-env-vars \
+              MONGO_URI="${{ secrets.MONGO_URI }}",\
+              DB_NAME="retail",\
+              SECRET_KEY="${{ secrets.SECRET_KEY }}"
 
-      # Repeat for import-service
+      # =====================================================
+      # 🔵 BUILD + PUSH + DEPLOY: Import Service
+      # =====================================================
+      - name: Build Import Service
+        run: |
+          docker build \
+            -f services/import-service/Dockerfile \
+            -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest \
+            .
+
+      - name: Push Import Service
+        run: |
+          docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest
+
+      - name: Deploy Import Service
+        run: |
+          gcloud run deploy import-service \
+            --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest \
+            --region $REGION \
+            --platform managed \
+            --allow-unauthenticated \
+            --service-account fastapi-run-sa@$PROJECT_ID.iam.gserviceaccount.com \
+            --set-env-vars \
+              MONGO_URI="${{ secrets.MONGO_URI }}",\
+              DB_NAME="retail",\
+              SECRET_KEY="${{ secrets.SECRET_KEY }}"
