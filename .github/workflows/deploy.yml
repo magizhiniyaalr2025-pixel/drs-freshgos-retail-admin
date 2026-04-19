@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+# 🔐 IMPORTANT: REQUIRED for WIF
+permissions:
+  id-token: write
+  contents: read
+
 env:
   PROJECT_ID: drs-freshgos-retail-admin-123
   REGION: asia-south1
@@ -31,7 +36,7 @@ jobs:
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
       # -----------------------------------
-      # 3. Setup gcloud
+      # 3. Setup gcloud CLI
       # -----------------------------------
       - name: Setup Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
@@ -57,7 +62,7 @@ jobs:
         run: |
           docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest
 
-      - name: Deploy Identity Service
+      - name: Deploy Identity Service to Cloud Run
         run: |
           gcloud run deploy identity-service \
             --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest \
@@ -84,7 +89,7 @@ jobs:
         run: |
           docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest
 
-      - name: Deploy Import Service
+      - name: Deploy Import Service to Cloud Run
         run: |
           gcloud run deploy import-service \
             --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest \
