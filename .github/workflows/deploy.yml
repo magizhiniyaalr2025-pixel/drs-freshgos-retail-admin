@@ -2,10 +2,8 @@ name: Deploy FastAPI Microservices (Cloud Run - WIF)
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
-# 🔐 IMPORTANT: REQUIRED for WIF
 permissions:
   id-token: write
   contents: read
@@ -20,49 +18,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # -----------------------------------
-      # 1. Checkout code
-      # -----------------------------------
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # -----------------------------------
-      # 2. Authenticate to GCP (WIF - NO KEY)
-      # -----------------------------------
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
-      # -----------------------------------
-      # 3. Setup gcloud CLI
-      # -----------------------------------
-      - name: Setup Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@v2
+      - uses: google-github-actions/setup-gcloud@v2
 
-      # -----------------------------------
-      # 4. Docker auth for Artifact Registry
-      # -----------------------------------
-      - name: Configure Docker authentication
+      - name: Configure Docker
+        run: gcloud auth configure-docker $REGION-docker.pkg.dev --quiet
+
+      # ---------------- Identity ----------------
+      - name: Build Identity
         run: |
-          gcloud auth configure-docker $REGION-docker.pkg.dev --quiet
+          docker build -f services/identity-service/Dockerfile \
+          -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest .
 
-      # =====================================================
-      # 🟢 BUILD + PUSH + DEPLOY: Identity Service
-      # =====================================================
-      - name: Build Identity Service
-        run: |
-          docker build \
-            -f services/identity-service/Dockerfile \
-            -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest \
-            .
-
-      - name: Push Identity Service
+      - name: Push Identity
         run: |
           docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest
 
-      - name: Deploy Identity Service to Cloud Run
+      - name: Deploy Identity
         run: |
           gcloud run deploy identity-service \
             --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/identity-service:latest \
@@ -72,21 +51,17 @@ jobs:
             --service-account fastapi-run-sa@$PROJECT_ID.iam.gserviceaccount.com \
             --set-env-vars "MONGO_URI=${{ secrets.MONGO_URI }},DB_NAME=${{ secrets.DB_NAME }},SECRET_KEY=${{ secrets.SECRET_KEY }}"
 
-      # =====================================================
-      # 🔵 BUILD + PUSH + DEPLOY: Import Service
-      # =====================================================
-      - name: Build Import Service
+      # ---------------- Import ----------------
+      - name: Build Import
         run: |
-          docker build \
-            -f services/import-service/Dockerfile \
-            -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest \
-            .
+          docker build -f services/import-service/Dockerfile \
+          -t $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest .
 
-      - name: Push Import Service
+      - name: Push Import
         run: |
           docker push $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest
 
-      - name: Deploy Import Service to Cloud Run
+      - name: Deploy Import
         run: |
           gcloud run deploy import-service \
             --image $REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/import-service:latest \
