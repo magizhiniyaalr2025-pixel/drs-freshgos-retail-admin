@@ -1,0 +1,1080 @@
+{
+    "date": "01/03/2026 05:00:57",
+    "upto": "02/03/2026 00:07:36",
+    "groups": {
+        "payment_summary": [
+            {
+                "name": "Cash Refund",
+                "amount": 0.0
+            },
+            {
+                "name": "Payin",
+                "amount": 0.0
+            },
+            {
+                "name": "Payout",
+                "amount": -159.0
+            },
+            {
+                "name": "Cash Lift",
+                "amount": -711.43
+            },
+            {
+                "name": "Cash Back (CB)",
+                "amount": -10.0
+            },
+            {
+                "name": "Cash In Drawer",
+                "amount": -8.38
+            },
+            {
+                "name": "Cash Overage",
+                "amount": 8.38
+            },
+            {
+                "name": "Card (inc CB & CBC)",
+                "amount": 3533.88
+            },
+            {
+                "name": "Card Charges (CBC)",
+                "amount": 0.0
+            },
+            {
+                "name": "Cash + Card (inc CBC)",
+                "amount": 4395.93
+            },
+            {
+                "name": "Promotion",
+                "amount": -541.16
+            },
+            {
+                "name": "U: TILL  T:1 Cash Overage",
+                "amount": 0.39
+            },
+            {
+                "name": "U: TILL  T:2 Cash Overage",
+                "amount": 20.24
+            },
+            {
+                "name": "U: TILL  T:2 Cash Shortage",
+                "amount": 12.25
+            }
+        ],
+        "sales_summary": [
+            {
+                "name": "ALCOHOL",
+                "qty": "57",
+                "amount": 445.35
+            },
+            {
+                "name": "ALES, STOUT & LAGER",
+                "qty": "3",
+                "amount": 24.17
+            },
+            {
+                "name": "AMBIENT",
+                "qty": "37",
+                "amount": 15.34
+            },
+            {
+                "name": "BABY CARE",
+                "qty": "2",
+                "amount": 2.49
+            },
+            {
+                "name": "BAKERY",
+                "qty": "10",
+                "amount": 17.86
+            },
+            {
+                "name": "Beer & Cider",
+                "qty": "9",
+                "amount": 67.93
+            },
+            {
+                "name": "Best Pets",
+                "qty": "6",
+                "amount": 15.4
+            },
+            {
+                "name": "BEVERAGES",
+                "qty": "11",
+                "amount": 15.67
+            },
+            {
+                "name": "BISCUITS",
+                "qty": "15",
+                "amount": 22.54
+            },
+            {
+                "name": "BOBBY'S",
+                "qty": "7",
+                "amount": 3.67
+            },
+            {
+                "name": "BREAD",
+                "qty": "6",
+                "amount": 9.64
+            },
+            {
+                "name": "BREAKFAST CEREAL",
+                "qty": "9",
+                "amount": 25.97
+            },
+            {
+                "name": "CAKES",
+                "qty": "1",
+                "amount": 2.99
+            },
+            {
+                "name": "Catering Grocery",
+                "qty": "3",
+                "amount": 14.27
+            },
+            {
+                "name": "CHILLED",
+                "qty": "69",
+                "amount": 150.0
+            },
+            {
+                "name": "CHILLED DAIRY",
+                "qty": "14",
+                "amount": 27.74
+            },
+            {
+                "name": "CHILLED MEAL/MEAT",
+                "qty": "5",
+                "amount": 7.45
+            },
+            {
+                "name": "CHILLED PREPARED/CONVENIENCE FOODS",
+                "qty": "23",
+                "amount": 35.3
+            },
+            {
+                "name": "CIDER",
+                "qty": "2",
+                "amount": 17.68
+            },
+            {
+                "name": "CIGARETTES",
+                "qty": "22",
+                "amount": 324.42
+            },
+            {
+                "name": "CIGARETTES & TOBACCO / VAPE",
+                "qty": "3",
+                "amount": 12.13
+            },
+            {
+                "name": "CONFECTIONARY",
+                "qty": "53",
+                "amount": 81.72
+            },
+            {
+                "name": "CONFECTIONERY",
+                "qty": "288",
+                "amount": 372.1
+            },
+            {
+                "name": "COOK",
+                "qty": "7",
+                "amount": 8.99
+            },
+            {
+                "name": "COOKING INGREDIENTS",
+                "qty": "4",
+                "amount": 8.99
+            },
+            {
+                "name": "COSTA",
+                "qty": "15",
+                "amount": 50.7
+            },
+            {
+                "name": "Crisps & Snacks",
+                "qty": "39",
+                "amount": 66.36
+            },
+            {
+                "name": "CRISPS SNACKS & NUTS",
+                "qty": "28",
+                "amount": 52.58
+            },
+            {
+                "name": "DEFAULT",
+                "qty": "53",
+                "amount": 121.6
+            },
+            {
+                "name": "DELI-DE-FRANCE(FRESHGOS)",
+                "qty": "14",
+                "amount": 43.64
+            },
+            {
+                "name": "DRINKS",
+                "qty": "101",
+                "amount": 171.67
+            },
+            {
+                "name": "FLAVOURED ALCOHOLIC",
+                "qty": "4",
+                "amount": 10.96
+            },
+            {
+                "name": "Food To Go",
+                "qty": "7",
+                "amount": 12.53
+            },
+            {
+                "name": "Fresh & Chilled / Bread & Cakes",
+                "qty": "4",
+                "amount": 6.54
+            },
+            {
+                "name": "FRESH BREAD & MORNING GOODS",
+                "qty": "6",
+                "amount": 14.32
+            },
+            {
+                "name": "FRESH MEAT & POULTRY",
+                "qty": "3",
+                "amount": 4.5
+            },
+            {
+                "name": "FRESH MILK & CREAM",
+                "qty": "8",
+                "amount": 19.52
+            },
+            {
+                "name": "FRESH PRODUCE",
+                "qty": "3",
+                "amount": 7.55
+            },
+            {
+                "name": "FRESHGOS FOOD TO GO",
+                "qty": "5",
+                "amount": 2.45
+            },
+            {
+                "name": "FRESHWAYS",
+                "qty": "28",
+                "amount": 41.76
+            },
+            {
+                "name": "FROZEN",
+                "qty": "4",
+                "amount": 36.38
+            },
+            {
+                "name": "FROZEN FOOD",
+                "qty": "3",
+                "amount": 6.97
+            },
+            {
+                "name": "Frozen Foods",
+                "qty": "1",
+                "amount": 2.5
+            },
+            {
+                "name": "FROZEN MEAT & POULTRY",
+                "qty": "2",
+                "amount": 3.0
+            },
+            {
+                "name": "FROZEN PIZZA",
+                "qty": "2",
+                "amount": 6.54
+            },
+            {
+                "name": "FROZEN POTATO",
+                "qty": "2",
+                "amount": 5.0
+            },
+            {
+                "name": "FRUIT - VEG SINGLE",
+                "qty": "2",
+                "amount": 3.0
+            },
+            {
+                "name": "GROCERY",
+                "qty": "47",
+                "amount": 75.25
+            },
+            {
+                "name": "HEALTH & BEAUTY",
+                "qty": "7",
+                "amount": 24.86
+            },
+            {
+                "name": "HEALTHCARE",
+                "qty": "3",
+                "amount": 6.27
+            },
+            {
+                "name": "HOME BAKING AND DESSERTS",
+                "qty": "2",
+                "amount": 3.34
+            },
+            {
+                "name": "HOMECARE",
+                "qty": "2",
+                "amount": 2.29
+            },
+            {
+                "name": "HOT BEVERAGES",
+                "qty": "1",
+                "amount": 8.49
+            },
+            {
+                "name": "ICE CREAM",
+                "qty": "7",
+                "amount": 33.73
+            },
+            {
+                "name": "INTERNATIONAL FOODS",
+                "qty": "2",
+                "amount": 3.84
+            },
+            {
+                "name": "KEGS BEER",
+                "qty": "6",
+                "amount": 239.7
+            },
+            {
+                "name": "Newspaper and Magazine",
+                "qty": "6",
+                "amount": 14.9
+            },
+            {
+                "name": "Non Foods",
+                "qty": "1",
+                "amount": 1.0
+            },
+            {
+                "name": "NON-FOOD",
+                "qty": "4",
+                "amount": 7.93
+            },
+            {
+                "name": "PAPERWARE",
+                "qty": "4",
+                "amount": 17.82
+            },
+            {
+                "name": "Pet Products",
+                "qty": "2",
+                "amount": 5.99
+            },
+            {
+                "name": "PETCARE",
+                "qty": "4",
+                "amount": 6.12
+            },
+            {
+                "name": "POTTS BAKERS",
+                "qty": "11",
+                "amount": 24.38
+            },
+            {
+                "name": "Retail Grocery",
+                "qty": "25",
+                "amount": 46.09
+            },
+            {
+                "name": "Retail Household",
+                "qty": "1",
+                "amount": 2.39
+            },
+            {
+                "name": "SEASONAL & BOXED CONFECTIONERY",
+                "qty": "3",
+                "amount": 7.54
+            },
+            {
+                "name": "SMOKING ACCESSORIES",
+                "qty": "8",
+                "amount": 18.37
+            },
+            {
+                "name": "SMOKING ALTERNATIVE",
+                "qty": "3",
+                "amount": 18.74
+            },
+            {
+                "name": "SOFT DRINKS",
+                "qty": "213",
+                "amount": 373.74
+            },
+            {
+                "name": "SOLV-X",
+                "qty": "3",
+                "amount": 4.79
+            },
+            {
+                "name": "SPIRITS",
+                "qty": "14",
+                "amount": 81.76
+            },
+            {
+                "name": "STATIONERY",
+                "qty": "3",
+                "amount": 7.63
+            },
+            {
+                "name": "TOBACCO",
+                "qty": "1",
+                "amount": 1.49
+            },
+            {
+                "name": "TOILETRIES & BEAUTY",
+                "qty": "1",
+                "amount": 3.99
+            },
+            {
+                "name": "USA",
+                "qty": "28",
+                "amount": 48.44
+            },
+            {
+                "name": "VAPE (SMOKING ALTERNATIVE)",
+                "qty": "205",
+                "amount": 1083.55
+            },
+            {
+                "name": "WINE",
+                "qty": "4",
+                "amount": 38.66
+            },
+            {
+                "name": "WINES SPIRITS BEERS",
+                "qty": "28",
+                "amount": 177.12
+            }
+        ],
+        "promotion_discount_refund": [
+            {
+                "name": "PROMOTION",
+                "amount": -541.16
+            },
+            {
+                "name": "DISCOUNT",
+                "amount": 0.0
+            },
+            {
+                "name": "REFUND",
+                "qty": "0",
+                "amount": 0.0
+            }
+        ],
+        "exclusive_departments": [
+            {
+                "name": "SCRATCH CARD",
+                "qty": "49",
+                "amount": 127.0
+            },
+            {
+                "name": "REFUND",
+                "qty": "0",
+                "amount": 0.0
+            }
+        ],
+        "refund_summary": [],
+        "payinpayout_summary": [
+            {
+                "name": "-PAYOUT - KEGS PROMOTION",
+                "amount": -18.0
+            },
+            {
+                "name": "-PAYOUT - KEGS RETURN",
+                "amount": -50.0
+            },
+            {
+                "name": "-PAYOUT - KEGS REWARD PAYOUT",
+                "amount": -5.0
+            },
+            {
+                "name": "-PAYOUT - LOTTERY - NATIONAL LOTTERY",
+                "amount": -30.0
+            },
+            {
+                "name": "-PAYOUT - SCRATCH CARD",
+                "amount": -56.0
+            }
+        ],
+        "vat_summary": [
+            {
+                "name": "0.00",
+                "qty": "846.97",
+                "amount": 846.97
+            },
+            {
+                "name": "20.00",
+                "qty": "2953.72",
+                "amount": 3544.47
+            },
+            {
+                "name": "5.00",
+                "qty": "4.28",
+                "amount": 4.49
+            }
+        ],
+        "promotion_summary": [
+            {
+                "name": "***2 FOR \u00a32.50",
+                "amount": -1.48
+            },
+            {
+                "name": "***2 FOR \u00a34",
+                "amount": -1.0
+            },
+            {
+                "name": "***2 FOR \u00a35",
+                "amount": -6.12
+            },
+            {
+                "name": "***3 FOR \u00a31.59",
+                "amount": -0.48
+            },
+            {
+                "name": "***3 FOR \u00a310",
+                "amount": -2.57
+            },
+            {
+                "name": "***ANY 2 FOR \u00a31.50",
+                "amount": -0.2
+            },
+            {
+                "name": "***ANY 2 FOR \u00a310",
+                "amount": -1.98
+            },
+            {
+                "name": "***ANY 2 FOR \u00a312",
+                "amount": -11.96
+            },
+            {
+                "name": "***ANY 2 FOR \u00a314",
+                "amount": -10.8
+            },
+            {
+                "name": "***ANY 2 FOR \u00a32.69",
+                "amount": -0.55
+            },
+            {
+                "name": "***ANY 2 FOR \u00a33.50",
+                "amount": -8.55
+            },
+            {
+                "name": "***ANY 2 FOR \u00a35.50",
+                "amount": -14.86
+            },
+            {
+                "name": "***ANY 3 FOR \u00a312",
+                "amount": -2.85
+            },
+            {
+                "name": "***ANY 3 FOR \u00a35.50",
+                "amount": -1.97
+            },
+            {
+                "name": "***ANY 3 FOR \u00a36",
+                "amount": -1.17
+            },
+            {
+                "name": "***ANY 3 FOR \u00a37.00",
+                "amount": -2.77
+            },
+            {
+                "name": "***BOOKER PROMO",
+                "amount": -4.5
+            },
+            {
+                "name": "***BUY 1 GET 1 FREE",
+                "amount": -11.38
+            },
+            {
+                "name": "***BUY 10 FOR \u00a325",
+                "amount": -74.5
+            },
+            {
+                "name": "***BUY 2 FOR \u00a310 // 600PUFFS",
+                "amount": -5.94
+            },
+            {
+                "name": "***BUY 2 FOR \u00a313//PODS",
+                "amount": -8.94
+            },
+            {
+                "name": "***Buy 2 for \u00a32.00",
+                "amount": -4.0
+            },
+            {
+                "name": "***BUY 2 FOR \u00a325",
+                "amount": -6.98
+            },
+            {
+                "name": "***BUY 2 FOR \u00a33",
+                "amount": -11.5
+            },
+            {
+                "name": "***BUY 3 FOR \u00a310//SALTS",
+                "amount": -25.61
+            },
+            {
+                "name": "***BUY 3 FOR \u00a312",
+                "amount": -1.73
+            },
+            {
+                "name": "***BUY 4 FOR \u00a310",
+                "amount": -1.96
+            },
+            {
+                "name": "***BUY 5 FOR \u00a315//SALTS",
+                "amount": -39.6
+            },
+            {
+                "name": "***BUY FOR \u00a31.39",
+                "amount": -1.2
+            },
+            {
+                "name": "***EDLP",
+                "amount": -0.04
+            },
+            {
+                "name": "***MEAL DEAL \u00a34.50",
+                "amount": -7.35
+            },
+            {
+                "name": "***ONKY 89P",
+                "amount": -9.0
+            },
+            {
+                "name": "***ONLY",
+                "amount": -7.54
+            },
+            {
+                "name": "***ONLY \u00a30.89",
+                "amount": -0.1
+            },
+            {
+                "name": "***ONLY \u00a31",
+                "amount": -12.77
+            },
+            {
+                "name": "***ONLY \u00a31.00",
+                "amount": -5.73
+            },
+            {
+                "name": "***ONLY \u00a31.09",
+                "amount": -3.26
+            },
+            {
+                "name": "***ONLY \u00a31.10",
+                "amount": -5.17
+            },
+            {
+                "name": "***ONLY \u00a31.20",
+                "amount": -1.47
+            },
+            {
+                "name": "***ONLY \u00a31.25",
+                "amount": -8.22
+            },
+            {
+                "name": "***ONLY \u00a31.35",
+                "amount": -6.0
+            },
+            {
+                "name": "***ONLY \u00a31.50",
+                "amount": -2.29
+            },
+            {
+                "name": "***ONLY \u00a31.53",
+                "amount": -0.82
+            },
+            {
+                "name": "***ONLY \u00a31.59",
+                "amount": -1.7
+            },
+            {
+                "name": "***ONLY \u00a31.75",
+                "amount": -6.12
+            },
+            {
+                "name": "***ONLY \u00a31.79",
+                "amount": -2.4
+            },
+            {
+                "name": "***ONLY \u00a31.85",
+                "amount": -6.24
+            },
+            {
+                "name": "***ONLY \u00a31.99",
+                "amount": -0.71
+            },
+            {
+                "name": "***ONLY \u00a310",
+                "amount": -31.73
+            },
+            {
+                "name": "***ONLY \u00a310.99",
+                "amount": -3.7
+            },
+            {
+                "name": "***ONLY \u00a313",
+                "amount": -14.32
+            },
+            {
+                "name": "***ONLY \u00a317.49",
+                "amount": -2.5
+            },
+            {
+                "name": "***ONLY \u00a32.00",
+                "amount": -0.85
+            },
+            {
+                "name": "***ONLY \u00a32.25",
+                "amount": -0.4
+            },
+            {
+                "name": "***ONLY \u00a32.50",
+                "amount": -0.98
+            },
+            {
+                "name": "***ONLY \u00a32.65",
+                "amount": -0.68
+            },
+            {
+                "name": "***ONLY \u00a32.99",
+                "amount": -2.21
+            },
+            {
+                "name": "***ONLY \u00a33",
+                "amount": -2.29
+            },
+            {
+                "name": "***ONLY \u00a33.25",
+                "amount": -11.34
+            },
+            {
+                "name": "***ONLY \u00a34.25",
+                "amount": -1.75
+            },
+            {
+                "name": "***ONLY \u00a34.50",
+                "amount": -3.48
+            },
+            {
+                "name": "***ONLY \u00a34.99",
+                "amount": -5.5
+            },
+            {
+                "name": "***ONLY \u00a35.99",
+                "amount": -26.4
+            },
+            {
+                "name": "***ONLY \u00a36.49",
+                "amount": -1.26
+            },
+            {
+                "name": "***ONLY \u00a37",
+                "amount": -2.99
+            },
+            {
+                "name": "***ONLY \u00a37.49",
+                "amount": -3.01
+            },
+            {
+                "name": "***ONLY \u00a37.99",
+                "amount": -11.37
+            },
+            {
+                "name": "***ONLY \u00a38.99",
+                "amount": -11.76
+            },
+            {
+                "name": "***ONLY \u00a39.99",
+                "amount": -8.5
+            },
+            {
+                "name": "***ONLY 1.39",
+                "amount": -5.1
+            },
+            {
+                "name": "***ONLY 1.69",
+                "amount": -4.16
+            },
+            {
+                "name": "***ONLY 50P",
+                "amount": -0.75
+            },
+            {
+                "name": "***ONLY 75P",
+                "amount": -0.75
+            },
+            {
+                "name": "***ONLY 90P",
+                "amount": -0.15
+            },
+            {
+                "name": "***ONLY 95P",
+                "amount": -1.18
+            },
+            {
+                "name": "***ONLY\u00a39",
+                "amount": -5.25
+            },
+            {
+                "name": "***ONY 9.99",
+                "amount": -1.5
+            },
+            {
+                "name": "***PEPERAMI 2 FOR \u00a32",
+                "amount": -0.5
+            },
+            {
+                "name": "***SAVE \u00a30.25",
+                "amount": -0.5
+            },
+            {
+                "name": "***SAVE \u00a30.50",
+                "amount": -1.0
+            },
+            {
+                "name": "***SAVE \u00a31.20",
+                "amount": -4.8
+            },
+            {
+                "name": "***SAVE \u00a31.20_x000D_",
+                "amount": -7.2
+            },
+            {
+                "name": "***SAVE \u00a33.50",
+                "amount": -4.26
+            },
+            {
+                "name": "***SAVE 25%",
+                "amount": -2.13
+            },
+            {
+                "name": "***SAVE A THIRD",
+                "amount": -0.83
+            }
+        ],
+        "discount_summary": [],
+        "hourly_sales_summary": [
+            {
+                "name": "0:00 - 1:00",
+                "qty": "2",
+                "amount": 23.99
+            },
+            {
+                "name": "5:00 - 6:00",
+                "qty": "8",
+                "amount": 65.77
+            },
+            {
+                "name": "6:00 - 7:00",
+                "qty": "4",
+                "amount": 15.04
+            },
+            {
+                "name": "7:00 - 8:00",
+                "qty": "6",
+                "amount": 86.42
+            },
+            {
+                "name": "8:00 - 9:00",
+                "qty": "10",
+                "amount": 32.93
+            },
+            {
+                "name": "9:00 - 10:00",
+                "qty": "20",
+                "amount": 137.02
+            },
+            {
+                "name": "10:00 - 11:00",
+                "qty": "29",
+                "amount": 364.85
+            },
+            {
+                "name": "11:00 - 12:00",
+                "qty": "32",
+                "amount": 270.75
+            },
+            {
+                "name": "12:00 - 13:00",
+                "qty": "35",
+                "amount": 314.48
+            },
+            {
+                "name": "13:00 - 14:00",
+                "qty": "31",
+                "amount": 247.44
+            },
+            {
+                "name": "14:00 - 15:00",
+                "qty": "35",
+                "amount": 285.73
+            },
+            {
+                "name": "15:00 - 16:00",
+                "qty": "30",
+                "amount": 300.41
+            },
+            {
+                "name": "16:00 - 17:00",
+                "qty": "49",
+                "amount": 543.61
+            },
+            {
+                "name": "17:00 - 18:00",
+                "qty": "55",
+                "amount": 470.21
+            },
+            {
+                "name": "18:00 - 19:00",
+                "qty": "45",
+                "amount": 301.97
+            },
+            {
+                "name": "19:00 - 20:00",
+                "qty": "41",
+                "amount": 278.31
+            },
+            {
+                "name": "20:00 - 21:00",
+                "qty": "28",
+                "amount": 184.72
+            },
+            {
+                "name": "21:00 - 22:00",
+                "qty": "30",
+                "amount": 220.56
+            },
+            {
+                "name": "22:00 - 23:00",
+                "qty": "18",
+                "amount": 172.01
+            },
+            {
+                "name": "23:00 - 24:00",
+                "qty": "11",
+                "amount": 79.71
+            }
+        ],
+        "operation_summary": [
+            {
+                "name": "Sales Transactions",
+                "amount": 522.0
+            },
+            {
+                "name": "- Cash Transactions",
+                "amount": 124.0
+            },
+            {
+                "name": "- Card Transactions",
+                "amount": 399.0
+            },
+            {
+                "name": "Refund Transactions",
+                "amount": 0.0
+            },
+            {
+                "name": "Average Basket Value",
+                "amount": 8.42
+            },
+            {
+                "name": "Void Line Amount",
+                "amount": 59.54
+            },
+            {
+                "name": "Void Sale Amount",
+                "amount": 0.0
+            },
+            {
+                "name": "Return Amount",
+                "amount": 0.0
+            }
+        ],
+        "void_lines": [
+            {
+                "name": "KELLOGGS R/K SQ CHOCOLATE PM x 1",
+                "amount": 0.79
+            },
+            {
+                "name": "H/LAND SPRG STILL PET 12/10 x 1",
+                "amount": 1.19
+            },
+            {
+                "name": "VOLVIC MINERAL WATER S/CAP x 1",
+                "amount": 1.55
+            },
+            {
+                "name": "ARIZONA G/T GING N HONEY x 2",
+                "amount": 3.98
+            },
+            {
+                "name": "NON-SCAN x 1",
+                "amount": 5.0
+            },
+            {
+                "name": "AU CHERRYNADE VODKA x 1",
+                "amount": 3.59
+            },
+            {
+                "name": "WKD X CITRUS ICE ?2.99 x 1",
+                "amount": 2.99
+            },
+            {
+                "name": "STELLA PINT x 1",
+                "amount": 2.49
+            },
+            {
+                "name": "MAYNARDS BASSETTS SOUR PATCH KIDS BLUE RASPBERRY PM\u00a31.50 x 2",
+                "amount": 3.0
+            },
+            {
+                "name": "Minus QTY: CADBURY BRUNCH BAR PM139 x 1",
+                "amount": 1.39
+            },
+            {
+                "name": "Minus QTY: HIT COCOA CREME PM1.59 x 1",
+                "amount": 1.59
+            },
+            {
+                "name": "Minus QTY: HIT COCOA CREME PM1.59 x 1",
+                "amount": 1.59
+            },
+            {
+                "name": "Minus QTY: ALCHOHOL - DAMAGED x 1",
+                "amount": 1.09
+            },
+            {
+                "name": "SMALL BAG x 1",
+                "amount": 0.15
+            },
+            {
+                "name": "Minus QTY: BIRRA MORETTI NRB UK x 1",
+                "amount": 4.09
+            },
+            {
+                "name": "Shop Use QTY",
+                "amount": -2.0
+            },
+            {
+                "name": "Shop Use Amount",
+                "amount": 2.98
+            },
+            {
+                "name": "Write Off QTY",
+                "amount": -16.0
+            },
+            {
+                "name": "Write Off Amount",
+                "amount": 32.2
+            }
+        ]
+    }
+}
