@@ -11,10 +11,11 @@ app = FastAPI(title="Identity Service (MongoDB)")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",  # frontend
+        "https://nextjs-app-356841010934.asia-south1.run.app",
+        'http://localhost:3000' # frontend
     ],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 

@@ -17,6 +17,7 @@ router = APIRouter()
 async def upload_file(
     file: UploadFile = File(...),
     store: str = Form(...),
+    upload_date: str = Form(...),
     user=Depends(get_current_user)
 ):
     contents = await file.read()
@@ -26,7 +27,7 @@ async def upload_file(
     records = await parser.parse_excel(contents)
     # Save to DB
     service = ImportService()
-    data = await service.save_data(records, user,store)
+    data = await service.save_data(records, user,store, upload_date)
     return success_response(
         data,
         message="File processed successfully"

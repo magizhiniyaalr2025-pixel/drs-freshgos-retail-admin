@@ -9,7 +9,7 @@ from common.responses.base import success_response
 router = APIRouter()
 
 
-@router.post("/summary")
+@router.post("/summary/")
 async def report_summary(
     filters: dict,
     user=Depends(get_current_user)):

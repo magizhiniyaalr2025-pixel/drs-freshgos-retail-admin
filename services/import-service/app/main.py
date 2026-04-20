@@ -12,7 +12,8 @@ app = FastAPI(title="Import Service")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",  # frontend
+        "https://nextjs-app-356841010934.asia-south1.run.app",
+        'http://localhost:3000' # frontend
     ],
     allow_credentials=True,
     allow_methods=["*"],

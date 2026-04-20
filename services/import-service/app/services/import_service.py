@@ -11,7 +11,7 @@ from datetime import datetime
     
 class ImportService:
 
-    async def save_data(self, records, user, store):
+    async def save_data(self, records, user, store,upload_date):
         data = records
 
         # Ensure date exists
@@ -35,6 +35,8 @@ class ImportService:
 
         # ✅ Add required fields
         data["store"] = store
+        data["date"] = data["date"]
+        data["upload_date"] = upload_date
         data["is_submitted"] = False
         data["status"] = StatusEnum.DRAFT.value  # Default status
         data["created_by"] = user
